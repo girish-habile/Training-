@@ -1,0 +1,99 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px; 
+}
+
+
+#backContainer{
+  height: 100vh;
+}
+.back{
+  background-color: #f0f0f0; 
+  transition: background-color 0.5s ease-in-out;
+}
+
+.img{
+  height: 480px;
+  width: 500px;
+  position: fixed;
+  top: 165px;
+  left: 500px;
+  background-image: url('/images/chair1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 0.5s ease-in-out;
+}
+.content{
+    width:500px;
+    position:fixed;
+    top:165px;
+    left:1145px;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.radio-buttons label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.radio-buttons input#color-1 + label {
+  background-image: url('images/color1.jpg');
+  background-size: cover;
+}
+
+.radio-buttons input#color-2 + label {
+  background-image: url('images/color2.jpg');
+  background-size: cover;
+}
+
+.radio-buttons input#color-3 + label {
+  background-image: url('images/color3.jpg');
+  background-size: cover;
+}
+
+.radio-buttons input#color-4 + label {
+  background-image: url('images/color4.jpg');
+  background-size: cover;
+}
+
+.radio-buttons input#color-5 + label {
+  background-image: url('images/color5.jpg');
+  background-size: cover;
+}
+
+.radio-buttons input#color-6 + label {
+  background-image: url('images/color6.jpg');
+  background-size: cover;
+}
+
+
+.animated-button {
+    background-color: #4CAF50; 
+    border: none; 
+    color: white;
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.animated-button:hover {
+  background-color: #45a049; 
+  transform: scale(1.1); 
+}
+
+.animated-button:active {
+  background-color: #3e8e41; 
+  transform: scale(1.05); 
+}

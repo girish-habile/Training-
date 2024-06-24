@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,th,td,table{
+            border:2px solid black;
+            border-collapse:collapse;
+            padding:20px;
+        } 
+        td:hover{background-color:blue;}
+        th:hover{background-color:blue;}
+    </style>
+</head>
+<body style ="background-color: beige;">
+    <h1>Table1 :</h1>    
+    <table>
+       
+    <caption>Rowspan and Colspan</caption>
+    <tr>
+     <th colspan ="6">Time Table</th>
+     </tr>
+
+     <tr>
+        <th rowspan ="6">Hours</th>
+         <th>Mon</th>
+         <th>Tue</th>
+         <th>Wed</th>
+         <th>Thu</th>
+         <th>Fri</th>
+     </tr>
+     <tr>
+        
+         <td>Science</td>
+         <td>Maths</td>
+         <td>science</td>
+         <td>Maths</td>
+         <td>Arts</td>
+     </tr>
+
+      <tr>
+        <th colspan ="5">LUNCH</th>
+      </tr>
+      
+      <tr>
+        <td>Science</td>
+         <td>Maths</td>
+         <td>science</td>
+         <td>Maths</td>
+         <td rowspan ="2">Project</td>
+    </tr>
+
+    <tr>
+        <td>Science</td>
+         <td>Maths</td>
+         <td>science</td>
+         <td>Maths</td>
+    </tr>
+    </table>
+
+    <h1>Table2:</h1>
+    <table>
+        <caption>Bill</caption>
+        <tr>
+            <th colspan="4">Self Store</th>
+        </tr>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Sugar</td>
+            <td>5Kg</td>
+            <td>50</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>Oil</td>
+            <td>2Kg</td>
+            <td>200</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>Soap</td>
+            <td>4 Pieces</td>
+            <td>40</td>
+            <td>160</td>  
+        </tr>
+        <tr>
+            <th colspan="3">Sub Total</th>
+            <td>810</td>
+        </tr>
+        <tr>
+            <th colspan="2">Tax</th>
+            <td>5%</td>
+            <td>41</td>
+        </tr>
+        <tr>
+            <th colspan="3">Total Bill</th>
+            <td>851</td>
+        </tr>
+    </table>
+    
+<h1>Table3 :</h1>
+
+<table>
+    <caption>
+     Complex Example
+    </caption>
+    <tr>
+        <td>1</td>
+        <td colspan="2">2</td>
+        <td>3</td>
+        <td colspan="2">4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td colspan ="3">6</td>
+        <td colspan = "4">7</td>
+    </tr>
+    <tr>
+        <td colspan ="4">8</td>
+        <td colspan = "3">9</td> 
+    </tr>
+    <tr>
+        <td rowspan ="2" colspan="3">10</td>
+        <td colspan="4">11</td>
+
+    </tr>
+    <tr>
+        <td colspan ="4">12</td>
+    </tr>
+    <tr>
+        <td rowspan="3" colspan ="2">13</td>
+        <td colspan ="3">14</td>
+        <td  rowspan = "3" colspan ="3">15</td>
+    </tr>
+    <tr>
+        <td colspan ="3">16</td>
+    </tr>
+    <tr>
+        <td colspan ="3">17</td>
+    </tr>
+    <tr>
+        <td  colspan="3">18</td>
+        <td colspan="4">19</td> 
+    </tr>
+    <tr>
+        <td>20</td>
+        <td rowspan ="4"  colspan = "2">21</td>
+        <td>22</td>
+        <td colspan = "2" rowspan="4">23</td>
+        <td>24</td>
+    </tr>
+   
+</table>
+
+<h1>Table 4:</h1>
+
+<table style="border-top: none;">
+    <tr>
+        <th>H</th>
+        <th colspan ="16" style="border-top: none;"></th>
+        <th>He</th>
+    </tr>
+    <tr>
+        <th>Li</th>
+        <th>Be</th>
+        <th rowspan ="2" colspan="10"></th>
+       
+        <th>B</th>
+        <th>C</th>
+        <th>N</th>
+        <th>O</th>
+        <th>F</th>
+        <th>Ne</th>
+
+    </tr>
+    <tr>
+        <th>Na</th>
+        <th>Mg</th>
+        
+        <th>Al</th>
+        <th>Si</th>
+        <th>P</th>
+        <th>S</th>
+        <th>Cl</th>
+        <th>Ar</th>
+    </tr>
+    <tr>
+        <th>K</th>
+        <th>Ca</th>
+        <th>Sc</th>
+        <th>Ti</th>
+        <th>V</th>
+        <th>Cr</th>
+        <th>Mn</th>
+        <th>Fe</th>
+        <th>Co</th>
+        <th>Ni</th>
+        <th>Cu</th>
+        <th>Zn</th>
+        <th>Ga</th>
+        <th>Ge</th>
+        <th>As</th>
+        <th>Se</th>
+        <th>Br</th>
+        <th>Kr</th>
+    </tr>
+    <tr>
+        <th>Rb</th>
+        <th>Sr</th>
+        <th>Y</th>
+        <th>Zr</th>
+        <th>Nb</th>
+        <th>Mo</th>
+        <th>Tc</th>
+        <th>Ru</th>
+        <th>Rh</th>
+        <th>Pd</th>
+        <th>Ag</th>
+        <th>Cd</th>
+        <th>In</th>
+        <th>Sn</th>
+        <th>Sb</th>
+        <th>Te</th>
+        <th>I</th>
+        <th>Xe</th>
+    </tr>
+    <tr>
+        <th>Cs</th>
+        <th>Ba</th>
+        <th></th>
+        <th>Hf</th>
+        <th>Ta</th>
+        <th>W</th>
+        <th>Re</th>
+        <th>Os</th>
+        <th>Ir</th>
+        <th>Pt</th>
+        <th>Au</th>
+        <th>Hg</th>
+        <th>Tl</th>
+        <th>Pb</th>
+        <th>Bi</th>
+        <th>Po</th>
+        <th>At</th>
+        <th>Rn</th>
+    </tr>
+    <tr>
+        <th>Fr</th>
+        <th>Ra</th>
+        <th></th>
+        <th>Rf</th>
+        <th>DB</th>
+        <th>Sg</th>
+        <th>Bh</th>
+        <th>Hs</th>
+        <th>Mt</th>
+        <th>Ds</th>
+        <th>Rg</th>
+        <th>Cn</th>
+        <th>Nh</th>
+        <th>Fl</th>
+        <th>Mc</th>
+        <th>Lv</th>
+        <th>Ts</th>
+        <th>Og</th>
+    </tr>
+    <tr>
+        <th colspan ="2" rowspan ="2"></th>
+        
+        <th>La</th>
+        <th>Ce</th>
+        <th>Pr</th>
+        <th>Nd</th>
+        <th>Pm</th>
+        <th>Sm</th>
+        <th>Eu</th>
+        <th>Gd</th>
+        <th>Tb</th>
+        <th>Dy</th>
+        <th>Ho</th>
+        <th>Er</th>
+        <th>Tm</th>
+        <th>Yb</th>
+        <th>Lu</th>
+        <th rowspan="2"></th>
+    </tr>
+    <tr>
+        <th>Ac</th>
+        <th>Th</th>
+        <th>Pa</th>
+        <th>U</th>
+        <th>Np</th>
+        <th>Pu</th>
+        <th>Am</th>
+        <th>Cm</th>
+        <th>Bk</th>
+        <th>Cf</th>
+        <th>Es</th>
+        <th>Fm</th>
+        <th>Md</th>
+        <th>No</th>
+        <th>Lr</th>
+    </tr>
+</table>
+
+<h1>Table 5:</h1>
+
+<table>
+    <tr>
+      <th>Header Column 1</th>
+      <th>Header Column 2</th>
+      <th>Header Column 3</th>
+      <th>Header Column 4</th>
+    </tr>
+    <tr>
+      <td>Row 2 - Item 1</td>
+      <td>Row 2 - Item 2</td>
+      <td><b>Row 2:Nested table 1</b>
+        <table>
+          <tr>
+            <th>Row 1 Header</th>
+            <td>item</td>
+            <tr>
+              <th>Row 2 Header</th>
+              <td>item</td>
+              <tr>
+                <th>Row 2 Header</th>
+                <td>item</td>
+        </table>
+      </td>
+      <td>Row 2 - Item 4
+        <br>A second line</td>
+      <tr>
+        <td>Row 3 - Item 1</td>
+        <td>Row 3 - Item 2</td>
+        <td>
+          <br>
+        </td>
+        <td>Row 3 - Item 3</td>
+      </tr>
+      <tr>
+        <td>Row 4 - Item 1</td>
+        <td>Row 4 - Item 2</td>
+        <td>Row 4 - Item 3</td>
+  </table>
+  <h1>Table 6:</h1>
+
+  <Table>
+    <caption>Online Order</caption>
+    <tr>
+        <th>description</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Email account note</th>
+    </tr>
+    <tr>
+        <td>Email Account</td>
+        <td>10</td>
+        <td>$9.90</td>
+        <td rowspan="5"> <table > 
+            <tr>
+                <td>MAilBox</td>
+                <td>YES</td>
+            </tr>
+            <tr>
+                <td>WebMAil</td>
+                <td>YES</td>
+            </tr>
+            <tr>
+                <td>POP#</td>
+                <td>YES</td>
+            </tr>
+            <tr>
+                <td>Anti-Spam</td>
+                <td>YES</td>
+            </tr>
+       </table>
+       </td>
+    </tr>
+    <tr>
+        <td>Ad</td>
+        <td>1</td>
+        <td>$99</td>
+    </tr>
+    <tr>
+        <td>1-year-Access</td>
+        <td>1</td>
+        <td>$199.00</td>
+    </tr>
+    <tr>
+        <td colspan="2">Shipping</td>
+        <td>$3.99</td>
+    </tr>
+    <tr>
+        <td colspan="2">Tax</td>
+        <td>$15.99</td>
+    </tr>
+  </table>
+  
+  <h1>Table 7:</h1>
+  <table style="width:800px">
+    <caption>Governement Form</caption>
+    <tr>
+        <th colspan ="4">Governement Application Form</th>
+    </tr>
+    <tr>
+        <th colspan ="4" style="text-align: left;">Desired Position:</th>
+    </tr>
+    <tr>
+        <th colspan ="4"></th>
+    </tr>
+    <tr>
+        <th colspan ="4"></th>
+    </tr>
+    <tr>
+        <th colspan ="4">PERSONAL INFOORMATION</th>
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="2">Name</th>
+        <th>First name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="2">Social Security No:</th>
+        <th>Date of Birth:</th>
+        <th>Age:</th>
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="2" rowspan ="2">Address:</th>
+        <th colspan="2">Telephone:</th>
+    </tr>
+    <tr style="text-align: left;">
+        
+        <th colspan="2">E-mail:</th>
+    </tr >
+    <tr style="text-align: left;">
+        <th colspan ="2" >Place  of Birth</th>
+        <th colspan="2">Nationality</th>
+       
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="2">Passport No:</th>
+        <th colspan="2">Date of Issue:</th>
+       
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="4">Marital Status:</th>
+       
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="2">Name of Spouse</th>
+        <th colspan="2">Address:</th>
+       
+    </tr>
+
+    <tr style="text-align: left;">
+        <th colspan ="2">Place  of Birth</th>
+        <th colspan="2">Nationality</th>
+       
+    </tr>
+    <tr style="text-align: left;"> 
+        <th colspan="4">Number of Child</th>
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="2">Place  of Birth</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+       
+    </tr>
+    <tr style="text-align: left;">
+        <th colspan ="2"></th>
+        <th></th>
+        <th></th>
+       
+    </tr>
+    <tr>
+        <th colspan ="2"></th>
+        <th></th>
+        <th></th>
+       
+    </tr>
+    <tr>
+        <th colspan ="2"  style="text-align: left;"></th>
+        <th></th>
+        <th></th>
+       
+    </tr>
+
+  </table>
+  
+
+</body>
+</html>

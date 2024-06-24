@@ -1,0 +1,63 @@
+
+#position{
+    display:flex;
+    
+    
+}
+#static{
+    border:2px solid black;
+    height:196px;
+    width:196px;
+    background-color:pink;
+    font-size: 48px;
+    margin:12px;
+    position:static;
+    top:40px;
+
+}
+#absoulate{
+    border:2px solid black;
+    height:196px;
+    width:196px;
+    background-color:rgb(205, 12, 44);
+    font-size: 48px;
+    margin:12px;
+    position: absolute;
+    top:190px;
+    left:45px;
+
+}
+#relative{
+    border:2px solid black;
+    height:196px;
+    width:196px;
+    background-color:rgb(138, 221, 44);
+    font-size: 48px;
+    margin:12px;
+    position: absolute;
+    top:790px;
+    left:5px;
+}
+#sticky{
+    border:2px solid black;
+    height:196px;
+    width:196px;
+    background-color:rgb(34, 23, 155);
+    font-size: 48px;
+    margin:12px;
+    position: sticky;
+    top:0px;
+    right:125px;
+}
+#fixed{
+    border:2px solid black;
+    height:196px;
+    width:196px;
+    background-color:rgb(234, 214, 30);
+    font-size: 48px;
+     margin:12px; 
+     position: fixed;
+    top:0px;
+    right:125px;
+}
+
