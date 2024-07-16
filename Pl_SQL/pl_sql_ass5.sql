@@ -1,8 +1,3 @@
-Set Serveroutput On;
-Set Verify Off;
-Set Define On;
-
-
 Declare
     Cursor Employee_Cursor (P_Dept_Id Employees.Department_Id%Type) Is
         Select Employee_Id, Salary
@@ -14,10 +9,20 @@ Declare
     V_Employee_Id Employees.Employee_Id%Type;
     V_Salary Employees.Salary%Type;
     
+    Cursor Dept_Ids Is 
+    Select 60 dept_id From Dual
+    Union 
+    Select 80 From Dual
+    Union Select 90 From Dual;
+    
+    
+    
 Begin
-    For  V_Dept_Id In  (60, 80, 90) Loop
+    For  v_dept_id in Dept_Ids Loop
+    
+    dbms_output.put_line(to_char(v_dept_id.dept_id));
         
-        Open Employee_cursor(V_Dept_Id);
+        Open Employee_cursor(V_Dept_Id.dept_id);
         Loop
             Fetch Employee_cursor Into V_Employee_Id, V_Salary;
             Exit When Employee_Cursor%Notfound;
