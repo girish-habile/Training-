@@ -68,7 +68,7 @@ BEGIN
   Dbms_Output.Put_Line('New Department Name: ' || V_Name);
   DBMS_OUTPUT.PUT_LINE('New Location ID: ' || V_Loc_Id);
 End;
-
+/
 
 --4
 DECLARE
@@ -102,6 +102,8 @@ EXCEPTION
 WHEN NO_DATA_FOUND THEN
   DBMS_OUTPUT.PUT_LINE('No employee found with ID: ' || V_Id);
 End;
+/
+
 
 --6
 Declare

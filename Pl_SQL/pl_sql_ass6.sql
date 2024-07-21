@@ -29,6 +29,7 @@ WHEN OTHERS THEN
   DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
 END;
 /
+
 --3
 DECLARE
 Type Emp_Type
@@ -155,6 +156,7 @@ EXCEPTION
         RAISE_APPLICATION_ERROR(-20000, 'An error occurred: ' || SQLERRM);
 END;
 /
+
 
 --8
 Declare

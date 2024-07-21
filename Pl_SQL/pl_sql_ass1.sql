@@ -1,6 +1,7 @@
 SET Serveroutput ON;
 SET Verify OFF;
 SET define ON;
+
 --1
 DECLARE
   v_salary NUMBER(5);
@@ -8,6 +9,9 @@ BEGIN
   V_SALARY := 5000;
   DBMS_OUTPUT.put_line('Salary  is ' || V_Salary);
 END;
+/
+
+
 --2
 DECLARE
   V_Length NUMBER(5);
@@ -19,6 +23,9 @@ BEGIN
   V_Area   := V_Length * V_Width;
   DBMS_OUTPUT.put_line('Area of rectangle   is ' || V_Area);
 END;
+/
+
+
 --3
 ACCEPT x VARCHAR2(100) PROMPT 'Please enter your message:'
 DECLARE
@@ -28,6 +35,9 @@ BEGIN
   MESSAGE := UPPER(MESSAGE);
   DBMS_OUTPUT.PUT_LINE('Message: ' || MESSAGE);
 END;
+/
+
+
 --4
 Accept X NUMBER(5) PROMPT 'Enter num1';
 ACCEPT y NUMBER(5) PROMPT 'Enter num2';
@@ -43,6 +53,9 @@ BEGIN
   Dbms_Output.Put_Line('Num1: '||Num1);
   Dbms_Output.Put_Line('Num2: '||Num2);
 END;
+/
+
+
 --5
 DECLARE
   emp_count NUMBER(5);
@@ -50,6 +63,9 @@ BEGIN
   SELECT COUNT(Employee_Id) INTO Emp_Count FROM Employees ;
   Dbms_Output.Put_Line('Number of Employees: ' || Emp_Count);
 END;
+/
+
+
 --6
 ACCEPT x VARCHAR2(50) PROMPT 'Enter Department Name:';
 DECLARE
@@ -69,6 +85,8 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE('Department ID: ' || v_id);
   DBMS_OUTPUT.PUT_LINE('Location ID: ' || v_loc_id);
 END;
+/
+
 --7
 DECLARE
   Avg_Salary NUMBER(10, 2);
@@ -76,6 +94,8 @@ BEGIN
   SELECT AVG(salary) INTO Avg_Salary FROM employees;
   DBMS_OUTPUT.PUT_LINE('Average Salary: ' || TO_CHAR(avg_salary, '99999.99'));
 END;
+/
+
 --8
 ACCEPT x PROMPT 'Enter Employee Id: ';
 DECLARE
@@ -91,6 +111,8 @@ BEGIN
   WHERE employee_id = emp_id;
   DBMS_OUTPUT.PUT_LINE('Employee Name: ' || employee_name);
 END;
+/
+
 --9
 DECLARE
   V_EMPID      NUMBER;
@@ -100,3 +122,5 @@ BEGIN
   v_new_salary:='&enter_salary';
   UPDATE EMPLOYEES SET SALARY=V_NEW_SALARY WHERE Employee_Id=V_Empid;
 END;
+/
+

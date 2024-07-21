@@ -56,6 +56,17 @@ begin
   get_employees_in_dept(3);
 end;
 
+
+--5
+
+
+
+
+
+
+
+
+
 --5
 Create Type Employee_Id_List As Table Of Number;
 Create Or Replace Procedure Update_Salary_Batch (P_Employee_Ids IN Employee_Id_List, P_Percentage_Increase In Number)

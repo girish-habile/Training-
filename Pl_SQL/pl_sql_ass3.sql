@@ -2,52 +2,44 @@ SET Serveroutput ON;
 Set Verify Off;
 SET Define ON;
 
+
 --1
 Declare
 V_Name Employees.First_Name%Type;
 V_Last_Name Employees.Last_Name%Type;
 V_Date Employees.Hire_Date%Type;
+
 Cursor Employee_Cursor Is
  Select First_Name , Last_Name , Hire_Date From Employees;
-
-
+ 
 Begin
 Open Employee_Cursor;
-
 Loop
 Fetch Employee_Cursor Into V_Name , V_Last_Name, V_Date;
-Exit When Employee_Cursor%Notfound;
+Exit When employee_cursor%rowcount <3 And Employee_Cursor%Notfound;
 Dbms_Output.Put_Line('First Name: '||V_Name);
 Dbms_Output.Put_Line('Last Name: '||V_Last_Name);
 Dbms_Output.Put_Line('Hire Date: '||V_Date);
 End Loop;
 Close Employee_Cursor;
-
 end;
+/
 
 
 --2
 Declare
 V_Name Employees.First_Name%Type;
 V_Salary Employees.Salary%Type;
-Cursor Employee_Cursor Is
- Select First_Name,Salary From Employees;
-
 Begin
-Open Employee_Cursor;
-
-Loop
-Fetch Employee_Cursor Into V_Name ,V_Salary;
-Exit When Employee_Cursor%Notfound;
-Dbms_Output.Put_Line('First Name: '||V_Name);
-Dbms_Output.Put_Line('Salary: '||V_Salary);
-V_Salary :=  V_Salary*1.1;
-Dbms_Output.Put_Line('Updated Salary: '||V_Salary);
-
-End Loop;
-Close Employee_Cursor;
-
+loop emp_rec in (select first_name , salary from employees) loop
+v_name := emp_rec.employee_name;
+v_salary := emp_record.salary;
+v_salary := v_salary * 1.1;
+dbms_output.put_line('Employee: '||v_name||', Salary: '||v_salary);
+end loop;
 end;
+
+
 
 --3
 Declare 
