@@ -1,0 +1,45 @@
+
+
+CREATE OR REPLACE PROCEDURE sp_populate_location_cor(p_etl_user_id IN VARCHAR2)
+IS
+    v_id VARCHAR2(36);
+    v_is_primary NUMBER(1,0);
+    v_location_id VARCHAR2(36);
+    v_user_id VARCHAR2(36);
+    
+    CURSOR center_cursor IS
+        SELECT region, coordinators
+        FROM SRC_CENTERS;
+    
+BEGIN
+    v_is_primary := 1;
+    
+    FOR rec IN center_cursor LOOP
+        v_id := SYS_GUID();
+        
+        IF v_is_primary = 1 THEN
+            v_is_primary := 0; 
+        END IF;
+        
+        SELECT id INTO v_location_id
+        FROM tar_location
+        WHERE name = rec.region; 
+        
+        SELECT id INTO v_user_id
+        FROM tar_user
+        WHERE first_name = rec.coordinators; 
+        
+        INSERT INTO tar_location_cordinator(id, is_primary, location_id, user_id, created_by,updated_by ,deleted_by)
+        VALUES (v_id, v_is_primary, v_location_id, v_user_id, p_etl_user_id,p_etl_user_id , NULL);
+        
+        COMMIT;
+    END LOOP;
+    
+EXCEPTION
+   
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+        ROLLBACK;
+        RAISE;
+END sp_populate_location_cor;
+/
